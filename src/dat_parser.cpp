@@ -13,3 +13,7 @@ dat_parser::dat_parser(std::string filename){
 std::string dat_parser::get_filename(){
     return this->filename;
 }
+
+void dat_parser::close(){
+    this->file.close();
+}

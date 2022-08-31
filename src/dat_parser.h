@@ -13,6 +13,7 @@ protected:
 public:
     dat_parser(std::string filename);
     std::string get_filename();
+    void close();
 };
 
 #endif

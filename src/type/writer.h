@@ -3,7 +3,7 @@
 
 #include "../dat_parser.cpp"
 
-class writer : dat_parser {
+class writer : public dat_parser {
 
 public:
     writer(std::string filename);
