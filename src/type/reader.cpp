@@ -8,7 +8,9 @@ std::vector<std::string> reader::read(){
 
     if (this->r_file.is_open()){
         while (std::getline(this->r_file, line)){
-            content.push_back(line);
+            if (line != ""){
+                content.push_back(line);
+            }
         }
     }
     return content;
