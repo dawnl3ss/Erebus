@@ -1,11 +1,10 @@
 #include <iostream>
-#include "src/type/writer.cpp"
+#include "erebus.h"
 
-int main(){
-    writer *wrt = new writer("test.dat");
-    wrt->write("test one");
-    wrt->write("test two");
-    wrt->close();
-    std::cout << "done !";
-    return 0;
+writer* get_writer(std::string filename){
+    return new writer(filename);
+}
+
+reader* get_reader(std::string filename){
+    return new reader(filename);
 }
